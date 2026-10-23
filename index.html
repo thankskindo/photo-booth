@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7eaff" />
+  <meta name="description" content="나만의 사진과 필터, 프레임 문구, 스티커로 꾸미는 인생네컷 웹 스튜디오" />
+  <title>FOURCUT CLUB — 나만의 인생네컷</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Fourcut Club 홈">
+      <span class="brand-mark">4</span>
+      <span>FOURCUT <em>CLUB</em></span>
+    </a>
+    <div class="topbar-note"><span class="live-dot"></span> YOUR LITTLE PHOTO STUDIO</div>
+    <a class="top-link" href="#editor">MAKE A MEMORY <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>✳</span> A LITTLE MOMENT, FOREVER</p>
+        <h1>오늘의 우리,<br /><span>네 컷으로</span> 남기기.</h1>
+        <p class="hero-description">사진을 올리고, 색감을 고르고, 귀여운 한마디를 더해봐요.<br class="desktop-break" /> 당신만의 작은 포토부스가 열렸어요.</p>
+        <div class="hero-tags"><span>#오늘의기록</span><span>#FOURCUTCLUB</span><span>#madebyyou</span></div>
+      </div>
+      <div class="hero-art" aria-label="네 컷 사진과 스티커 장식 미리보기">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-polaroid hero-polaroid-back"><span>GOOD<br />VIBES</span><b>✦</b></div>
+        <div class="hero-polaroid hero-polaroid-front">
+          <div class="mini-photo mini-one">☀</div><div class="mini-photo mini-two">♡</div>
+          <div class="mini-photo mini-three">✿</div><div class="mini-photo mini-four">✧</div>
+          <div class="mini-caption">LITTLE JOYS, BIG MEMORIES</div>
+        </div>
+        <span class="float-sticker sticker-sparkle">✦</span><span class="float-sticker sticker-heart">♡</span>
+        <span class="float-sticker sticker-smile">☻</span><span class="hero-note">KEEP THIS<br />MOMENT!</span>
+      </div>
+    </section>
+
+    <section class="studio" id="editor">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / THE STUDIO</p><h2>사진을 만들어볼까요?</h2></div>
+        <span class="step-pill">4 CUTS · 1 MEMORY</span>
+      </div>
+
+      <div class="workspace">
+        <aside class="editor-panel glass-panel">
+          <section class="control-section upload-section">
+            <div class="control-title"><span class="section-icon">↥</span><div><h3>사진 넣기</h3><p>원하는 순서대로 최대 4장</p></div></div>
+            <div class="upload-grid" id="uploadGrid" aria-label="사진 업로드"></div>
+            <label class="upload-all-button" for="multiUpload"><span>＋</span> 사진 여러 장 한 번에 추가</label>
+            <input id="multiUpload" type="file" accept="image/*" multiple hidden />
+            <p class="helper-text">JPG, PNG, WEBP · 사진은 이 브라우저 안에서만 처리돼요.</p>
+          </section>
+
+          <section class="control-section">
+            <div class="control-title"><span class="section-icon">◈</span><div><h3>레이아웃 & 프레임</h3><p>사진 분위기에 맞게 골라봐요</p></div></div>
+            <div class="segmented" role="group" aria-label="사진 레이아웃">
+              <button type="button" class="segment active" data-layout="strip" aria-pressed="true"><span class="layout-icon strip-icon">▥</span>세로 4컷</button>
+              <button type="button" class="segment" data-layout="grid" aria-pressed="false"><span class="layout-icon grid-icon">▦</span>2 × 2</button>
+            </div>
+            <div class="swatch-row" id="frameSwatches" aria-label="프레임 색상">
+              <button class="swatch selected" data-frame="lilac" aria-label="라일락 프레임" title="라일락"><span></span></button>
+              <button class="swatch" data-frame="pink" aria-label="핑크 프레임" title="핑크"><span></span></button>
+              <button class="swatch" data-frame="butter" aria-label="버터 프레임" title="버터"><span></span></button>
+              <button class="swatch" data-frame="mint" aria-label="민트 프레임" title="민트"><span></span></button>
+              <button class="swatch" data-frame="night" aria-label="나이트 프레임" title="나이트"><span></span></button>
+            </div>
+          </section>
+
+          <section class="control-section">
+            <div class="control-title"><span class="section-icon">☼</span><div><h3>필터 고르기</h3><p>한 번에 전체 사진에 적용돼요</p></div></div>
+            <div class="filter-grid" id="filterGrid">
+              <button type="button" class="filter-option selected" data-filter="original" aria-pressed="true"><span class="filter-sample filter-original">Aa</span><span>원본</span></button>
+              <button type="button" class="filter-option" data-filter="soft" aria-pressed="false"><span class="filter-sample filter-soft">Aa</span><span>소프트</span></button>
+              <button type="button" class="filter-option" data-filter="film" aria-pressed="false"><span class="filter-sample filter-film">Aa</span><span>필름</span></button>
+              <button type="button" class="filter-option" data-filter="mono" aria-pressed="false"><span class="filter-sample filter-mono">Aa</span><span>흑백</span></button>
+              <button type="button" class="filter-option" data-filter="vivid" aria-pressed="false"><span class="filter-sample filter-vivid">Aa</span><span>비비드</span></button>
+              <button type="button" class="filter-option" data-filter="warm" aria-pressed="false"><span class="filter-sample filter-warm">Aa</span><span>웜톤</span></button>
+            </div>
+          </section>
+
+          <section class="control-section">
+            <div class="control-title"><span class="section-icon">✎</span><div><h3>프레임 문구</h3><p>우리만 아는 한마디를 적어주세요</p></div></div>
+            <label class="field-label" for="topText">위쪽 문구</label>
+            <input id="topText" class="text-input" maxlength="32" value="LITTLE MOMENTS, BIG MEMORIES" placeholder="예: OUR HAPPY DAY" />
+            <label class="field-label" for="bottomText">아래쪽 문구</label>
+            <input id="bottomText" class="text-input" maxlength="42" value="오늘도 반짝이는 우리 ♡" placeholder="예: BEST DAY EVER ♡" />
+            <div class="text-options"><label class="check-option"><input id="showDate" type="checkbox" checked /> 날짜 표시</label><span class="font-badge">BOLD + PLAYFUL</span></div>
+          </section>
+
+          <section class="control-section sticker-section">
+            <div class="control-title"><span class="section-icon">✦</span><div><h3>스티커 붙이기</h3><p>추가한 스티커는 미리보기에서 끌어 옮길 수 있어요</p></div></div>
+            <div class="sticker-tray" id="stickerTray" aria-label="스티커 선택"></div>
+            <p class="helper-text">스티커를 눌러 추가하고, 미리보기에서 드래그해 위치를 바꿔보세요.</p>
+            <button type="button" class="text-button" id="clearStickers">스티커 모두 지우기 ↺</button>
+          </section>
+          <div class="editor-footer"><span>✿ Crafted by you</span><button type="button" id="resetButton" class="reset-button">처음부터 다시</button></div>
+        </aside>
+
+        <section class="preview-panel" aria-label="사진 결과 미리보기">
+          <div class="preview-topline"><div><p class="eyebrow">02 / LIVE PREVIEW</p><h2>미리보기 <span class="live-badge"><i></i> LIVE</span></h2></div><span class="preview-counter" id="photoCounter">0 / 4 PHOTOS</span></div>
+          <div class="preview-stage">
+            <div class="stage-glow"></div>
+            <div class="canvas-wrap" id="canvasWrap"><canvas id="photoCanvas" aria-label="인생네컷 결과 이미지. 스티커를 드래그해 위치를 조정할 수 있습니다."></canvas></div>
+            <div class="stage-decoration stage-star">✳</div><div class="stage-decoration stage-heart">♡</div>
+          </div>
+          <div class="preview-hint"><span class="hint-icon">↔</span><span>스티커를 드래그해서 원하는 곳에 놓아보세요.</span></div>
+          <button type="button" class="download-button" id="downloadButton"><span class="download-icon">↓</span><span><strong>사진 다운로드</strong><small>고화질 PNG · 바로 저장</small></span><span class="download-arrow">↗</span></button>
+          <p class="privacy-note"><span>🔒</span> 업로드한 사진은 서버로 전송되지 않아요.</p>
+        </section>
+      </div>
+    </section>
+
+    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark">4</span><span>FOURCUT <em>CLUB</em></span></a><p>Make a little memory out of an ordinary day.</p><span class="footer-flower">✿</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
